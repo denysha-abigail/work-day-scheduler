@@ -19,7 +19,7 @@ function appendDiv() {
 
 function createTask() {
     appendDiv();
-    
+
     // get current time and set it to military time
     var currentTime = moment().format("HH" + "00");
 
@@ -28,14 +28,18 @@ function createTask() {
 
         var hrBlock = ($(this).find(".hour").text().split("hrs")[0]);
         $(this).find(".saveBtn").attr("id", hrBlock);
+        $(this).attr("id", hrBlock);
+        loadLocal();
 
         if (currentTime < hrBlock) {
-            $(this).find(".hour-block").addClass("future").attr("id", hrBlock);
+            $(this).find(".hour-block").addClass("future");
         } else if (currentTime > hrBlock) {
-            $(this).find(".hour-block").addClass("past").attr("id", hrBlock);
+            $(this).find(".hour-block").addClass("past");
         } else {
-            $(this).find(".hour-block").addClass("present").attr("id", hrBlock);
+            $(this).find(".hour-block").addClass("present");
         }
+
+
 
     });
 }
@@ -45,10 +49,21 @@ $(".container").on("click", "button", function () {
 
     var text = $(this).siblings(".description").val();
     var time = $(this).attr("id");
-    
+
     localStorage.setItem(time, text);
 });
 
+function loadLocal() {
+    $("#0900 .description").val(localStorage.getItem("0900"));
+    $("#1000 .description").val(localStorage.getItem("1000"));
+    $("#1100 .description").val(localStorage.getItem("1100"));
+    $("#1200 .description").val(localStorage.getItem("1200"));
+    $("#1300 .description").val(localStorage.getItem("1300"));
+    $("#1400 .description").val(localStorage.getItem("1400"));
+    $("#1500 .description").val(localStorage.getItem("1500"));
+    $("#1600 .description").val(localStorage.getItem("1600"));
+    $("#1700 .description").val(localStorage.getItem("1700"));
+}
 
 createTask();
 
