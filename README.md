@@ -20,7 +20,7 @@ Clicking the section between the time block and the blue save button will highli
 Vist [The 9 to 5 Spot](https://denysha-abigail.github.io/work-day-scheduler/) to begin planning out your day!
 
 ## Preview:
-![screenshot]()
+![screenrecording](./assets/images/work-day-scheduler.gif)
 
 ## Credits:
 [Xander Rapstine](https://github.com/coding-boot-camp/super-disco)
