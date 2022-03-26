@@ -67,7 +67,8 @@ function loadLocal() {
 // call createTask function
 createTask();
 
-// refresh page every minute to display current time and compare it to hrBlock
+// refresh page every 5 minutes to display current time and compare it to hrBlock
+// gives user time to input and save their task before the page reloads on them
 setInterval(function () {
     location.reload();
-}, 60000);
+}, 300000);
