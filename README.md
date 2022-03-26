@@ -14,7 +14,7 @@ Clicking the section between the time block and the blue save button will highli
 
 - When your current time is before the time block of an upcoming task (i.e. your current time is 1330hrs and a task is scheduled to be completed between 1500-1600hrs), the task box will be displayed with a lime-green background color.
 
-> Note: Your browser will automatically refresh every 5 minutes. By saving and storing your task, it will continue to display on your computer when the page reloads as scheduled and even after closing your browser or refreshing your screen.
+> Note: Your browser will automatically refresh every 3 minutes. By saving and storing your task, it will continue to display on your computer when the page reloads as scheduled and even after closing your browser or refreshing your screen.
 
 ## Website:
 Vist [The 9 to 5 Spot](https://denysha-abigail.github.io/work-day-scheduler/) to begin planning out your day!
