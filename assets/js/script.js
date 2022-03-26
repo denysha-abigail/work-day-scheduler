@@ -41,7 +41,7 @@ function createTask() {
     });
 }
 
-// set localStorage for time and text description when save button is clicked
+// set time and text description on localStorage when save button is clicked
 $(".container").on("click", "button", function () {
 
     var text = $(this).siblings(".description").val();
@@ -50,7 +50,7 @@ $(".container").on("click", "button", function () {
     localStorage.setItem(time, text);
 });
 
-// get localStorage for time and text description when page is refreshed
+// get time and text description from localStorage when page is refreshed or opened again after browser was closed
 function loadLocal() {
 
     $("#0900 .description").val(localStorage.getItem("0900"));
@@ -66,3 +66,8 @@ function loadLocal() {
 
 // call createTask function
 createTask();
+
+// refresh page every minute to display current time and compare it to hrBlock
+setInterval(function () {
+    location.reload();
+}, 60000);

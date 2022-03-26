@@ -17,7 +17,7 @@ Clicking the section between the time block and the blue save button will highli
 > Note: By saving and storing your task, it will continue to display on your computer even after closing your browser or refreshing your screen.
 
 ## Website:
-Vist [The 9 to 5 Spot]() to begin planning out your day!
+Vist [The 9 to 5 Spot](https://denysha-abigail.github.io/work-day-scheduler/) to begin planning out your day!
 
 ## Preview:
 ![screenshot]()
