@@ -1,22 +1,29 @@
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
+# The 9 to 5 Spot
 
-GIVEN I am using a daily planner to create a schedule
-*WHEN I open the planner*
-*THEN the current day is displayed at the top of the calendar*
+## Beta Version 0.1
 
-*WHEN I scroll down*
-*THEN I am presented with time blocks for standard business hours*
+## Features:
+Built with HTML, CSS, jQuery, JavaScript, Bootstrap, Iconic, and Moment.js, this daily planner web application will allow you to schedule and keep track of tasks to be completed during your 9am-5pm work day. 
 
-*WHEN I view the time blocks for that day*
-*THEN each time block is color-coded to indicate whether it is in the past, present, or future*
+## How to Use:
+Clicking the section between the time block and the blue save button will highlight the textbox field that corresponds to the time of your choice. Once you input a pending task for that given time, click on the blue save button directly to the right of it to store your task into the local storage of your computer. To edit a task, simply click on the textbox field you wish to change, make your edits, and click the save button again to store the updated input. 
 
-WHEN I click into a time block
-THEN I can enter an event
+- When your current time is within the same time block as your task (i.e. your current time is 1330hrs and a task is scheduled to be completed between 1300-1400hrs), the task box will be displayed with a salmon background color.
 
-WHEN I click the save button for that time block
-THEN the text for that event is saved in local storage
+- When your current time has passed the time block of your task (i.e. your current time is 1330hrs and a task was scheduled to be completed between 1100-1200hrs), the task box will be displayed with a grey background color.
 
-WHEN I refresh the page
-THEN the saved events persist
+- When your current time is before the time block of an upcoming task (i.e. your current time is 1330hrs and a task is scheduled to be completed between 1500-1600hrs), the task box will be displayed with a lime-green background color.
+
+> Note: By saving and storing your task, it will continue to display on your computer even after closing your browser or refreshing your screen.
+
+## Website:
+Vist [The 9 to 5 Spot]() to begin planning out your day!
+
+## Preview:
+![screenshot]()
+
+## Credits:
+[Xander Rapstine](https://github.com/coding-boot-camp/super-disco)
+
+## Contributors:
+*Denysha Guerrios-Armaiz, 03/2022*

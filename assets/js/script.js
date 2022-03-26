@@ -1,10 +1,10 @@
-// display current day
+// display current day at the top of the calendar
 $("#currentDay").text(moment().format("LLLL"));
 
 var time = ['0900', '1000', '1100', '1200', '1300', '1400', '1500', '1600', '1700']
 
+// dynamically render HTML DOM elements
 function appendDiv() {
-    // create HTML DOM elements
     time.forEach(hour => {
 
         $('.container').append(`
@@ -17,13 +17,13 @@ function appendDiv() {
     });
 };
 
+// allow user to input tasks and save them onto local storage
 function createTask() {
     appendDiv();
-
-    // get current time and set it to military time
+    // set current time to military time
     var currentTime = moment().format("HH" + "00");
 
-    // loop through each hour to set corresponding color blocks
+    // loop through each hour to color code task blocks based on scheduled time vs current time comparison
     $(".time-block").each(function () {
 
         var hrBlock = ($(this).find(".hour").text().split("hrs")[0]);
@@ -38,13 +38,10 @@ function createTask() {
         } else {
             $(this).find(".hour-block").addClass("present");
         }
-
-
-
     });
 }
 
-// localStorage the hr id value and text description
+// set localStorage for time and text description when save button is clicked
 $(".container").on("click", "button", function () {
 
     var text = $(this).siblings(".description").val();
@@ -53,7 +50,9 @@ $(".container").on("click", "button", function () {
     localStorage.setItem(time, text);
 });
 
+// get localStorage for time and text description when page is refreshed
 function loadLocal() {
+
     $("#0900 .description").val(localStorage.getItem("0900"));
     $("#1000 .description").val(localStorage.getItem("1000"));
     $("#1100 .description").val(localStorage.getItem("1100"));
@@ -65,5 +64,5 @@ function loadLocal() {
     $("#1700 .description").val(localStorage.getItem("1700"));
 }
 
+// call createTask function
 createTask();
-
